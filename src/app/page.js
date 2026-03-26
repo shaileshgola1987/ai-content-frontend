@@ -24,7 +24,7 @@ export default function AIApp() {
     setLoading(true);
     setResult('');
     try {
-      const { data } = await axios.post(`http://103.174.102.194:5000${activeTab.endpoint}`, { prompt });
+      const { data } = await axios.post(`https://ai-apis.mart4trade.com${activeTab.endpoint}`, { prompt });
       setResult(data.data);
     } catch (error) {
       setResult("### ⚠️ Error\nCould not connect to the backend. Please ensure your Node.js server is running on port 5000.");
